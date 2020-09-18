@@ -1,0 +1,4 @@
+matplotlib
+regex
+sklearn
+nltk
