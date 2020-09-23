@@ -1,3 +1,5 @@
+Methodology Explained (video) :- https://www.youtube.com/watch?v=albemFlWzBI
+
 #################### Temporal Retweet Prediction ####################
 
 Python version: 3.6.8
