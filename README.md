@@ -12,7 +12,7 @@ Create virtualenv   : `virtualenv --system-site-packages -p python3 ./venv` </br
 Activate virtualenv : `source venv/bin/activate` </br>
 
 ### Install Requirements
-run `pip3 install -r requirements.txt`
+Run `pip3 install -r requirements.txt`
 
 NOTE: If you get this error `ModuleNotFoundError: No module named 'matplotlib._path'`, run `pip3 install --upgrade matplotlib`
 
@@ -28,7 +28,7 @@ Run `python predict_my_retweet.py` and enter
 ### How to train model 
 - Download pre-trained twitter word embedding from https://nlp.stanford.edu/projects/glove/
 - Create word embedding vectors of 100-dimension for your tweet dataset by using code specified in https://github.com/stanfordnlp/GloVe and name it `custom_WE.txt`. </br>
-   NOTE: We have created corona specific glove embedding called `custom_WE.txt`, so if you just want to test run the code, you DONT have to 
+   NOTE: We have created corona specific glove embedding called `custom_WE.txt`, so if you just want to test run the code, you DON'T have to 
    create new coutom word embedding.
 - Run `python warm_up_lstm.py` to warm up the LSTM. This will create encoder model which will be saved in `/saved_models` and will be named 
    `encoder_model.h5`
@@ -42,16 +42,16 @@ Run `python predict_my_retweet.py` and enter
 ### Create keywords
 Create a file named `keywords.txt` and enter keywords related to tweets that you want to extract.
 
-### Make alteast 2 twitter developer accounts
+### Make alteast 2 Twitter developer accounts
 Developer accounts are required in order to collect data.
 
 ### Collect user info whose tweet match any one of the keywords
-run `extract_tweets.py`. Once run, it will collect 1500 tweets according to keywords. I added an additional condition that the user should 
+Run `extract_tweets.py`. Once run, it will collect 1500 tweets according to keywords. I added an additional condition that the user should 
 have atleast 100 followers so that there is a greater change of not getting all 0's in `temporal_retweet_count`.
 
 ### Get number of retweets each hour
-run `get_retweet_count.py` to get the retweet count of above 1500 tweets. </br>
+Run `get_retweet_count.py` to get the retweet count of above 1500 tweets. </br>
 NOTE: This will give only the retweet count at the time you run this code. </br>
 
-If you want it to run each hour, use cron. </br>
+If you want it to run each hour automatically, use cron. </br>
 NOTE: If the tweet is deleted, then NULL is added to csv. </br>
