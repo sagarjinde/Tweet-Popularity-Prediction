@@ -2,6 +2,8 @@ Methodology Explained (video) :- https://www.youtube.com/watch?v=albemFlWzBI
 
 # Temporal Retweet Prediction
 
+## Running the code
+
 `Python version: 3.6.8`
 
 ### Create a virtual environment (Recommended but optional)
@@ -21,12 +23,13 @@ Run `python predict_my_retweet.py` and enter
 - followers_count
 - account_age
 - total_tweet_count
-- favourited_tweet_count 
+- favourited_tweet_count </br>
 when asked by the program.
 
 ### How to train model 
-- Create word embedding vectors of 100-dimension for your tweet dataset by using glove embeddings code specified in https://github.com/stanfordnlp/GloVe and name it `custom_WE.txt` 
-   NOTE: We have created corona specific glove embedding called `custom_WE.txt`, so if you want to just run the code, you DONT have to 
+- Download pre-trained twitter word embedding from https://nlp.stanford.edu/projects/glove/
+- Create word embedding vectors of 100-dimension for your tweet dataset by using code specified in https://github.com/stanfordnlp/GloVe and name it `custom_WE.txt` 
+   NOTE: We have created corona specific glove embedding called `custom_WE.txt`, so if you just want to test run the code, you DONT have to 
    create new coutom word embedding.
 - Run `python warm_up_lstm.py` to warm up the LSTM. This will create encoder model which will be saved in `/saved_models` and will be named 
    `encoder_model.h5`
@@ -35,7 +38,7 @@ when asked by the program.
 - Run `python end-to-end.py` to train the full model from end to end. This will create full model which will be saved in `/saved_models` and 
    will be named `final_model.h5`
 
-# Data Creation
+## Custom dataset
 
 ### Create keywords
 Create a file named `keywords.txt` and enter keywords related to tweets that you want to extract.
@@ -53,6 +56,3 @@ NOTE: This will give only the retweet count at the time you run this code. </br>
 
 If you want it to run each hour, use cron. </br>
 NOTE: If the tweet is deleted, then NULL is added to csv. </br>
-
-# Create GloVe Embedding
-
