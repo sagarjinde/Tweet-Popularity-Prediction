@@ -2,6 +2,26 @@ Methodology Explained (video) :- https://www.youtube.com/watch?v=albemFlWzBI
 
 # Temporal Retweet Prediction
 
+## Objective
+
+- Build a model that uses textual data as well as the author's social features to predict the potential influence of tweets, as
+measured by their retweet counts
+- Predict retweet count each hour for a duration of 72 hours
+
+**Note:** It's a regression based problem.
+
+## Get Started
+
+The model is a modified version of [Retweet Wars](https://www.cs.unc.edu/~mbansal/papers/retweetwars-wacv18.pdf)
+
+#### Model while training:
+
+![Training Model]()
+
+#### Model while testing:
+
+![Testing Model]()
+
 ## Running the code
 
 `Python version: 3.6.8`
@@ -14,7 +34,7 @@ Activate virtualenv : `source venv/bin/activate` </br>
 ### Install Requirements
 Run `pip3 install -r requirements.txt`
 
-NOTE: If you get this error `ModuleNotFoundError: No module named 'matplotlib._path'`, run `pip3 install --upgrade matplotlib`
+**Note:** If you get `ModuleNotFoundError: No module named 'matplotlib._path'` error, run `pip3 install --upgrade matplotlib`
 
 ### How to predict retween count for your tweet
 Run `python predict_my_retweet.py` and enter 
@@ -28,7 +48,7 @@ Run `python predict_my_retweet.py` and enter
 ### How to train model 
 - Download pre-trained twitter word embedding from https://nlp.stanford.edu/projects/glove/
 - Create word embedding vectors of 100-dimension for your tweet dataset by using code specified in https://github.com/stanfordnlp/GloVe and name it `custom_WE.txt`. </br>
-   NOTE: We have created corona specific glove embedding called `custom_WE.txt`, so if you just want to test run the code, you DON'T have to 
+   **Note:** We have created corona specific glove embedding called `custom_WE.txt`, so if you just want to test run the code, you DON'T have to 
    create new coutom word embedding.
 - Run `python warm_up_lstm.py` to warm up the LSTM. This will create encoder model which will be saved in `/saved_models` and will be named 
    `encoder_model.h5`
@@ -51,7 +71,7 @@ have atleast 100 followers so that there is a greater change of not getting all 
 
 ### Get number of retweets each hour
 Run `get_retweet_count.py` to get the retweet count of above 1500 tweets. </br>
-NOTE: This will give only the retweet count at the time you run this code. </br>
+**Note:** This will give only the retweet count at the time you run this code. </br>
 
 If you want it to run each hour automatically, use cron. </br>
-NOTE: If the tweet is deleted, then NULL is added to csv. </br>
+**Note:** If the tweet is deleted, then NULL is added to csv. </br>
