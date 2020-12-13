@@ -1,5 +1,3 @@
-Methodology Explained (video) :- https://www.youtube.com/watch?v=albemFlWzBI
-
 # Temporal Retweet Prediction
 
 ## Objective
@@ -23,6 +21,8 @@ Go through the [report](https://github.com/sagarjinde/Tweet-Popularity-Predictio
 #### Model while testing:
 
 ![Testing Model](https://github.com/sagarjinde/Tweet-Popularity-Prediction/blob/master/figs/test_fig.png)
+
+Methodology Explained (video) :- https://www.youtube.com/watch?v=albemFlWzBI
 
 ## Running the code
 
