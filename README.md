@@ -14,13 +14,15 @@ measured by their retweet counts
 
 The model is a modified version of [Retweet Wars](https://www.cs.unc.edu/~mbansal/papers/retweetwars-wacv18.pdf)
 
+Go through the [report](https://github.com/sagarjinde/Tweet-Popularity-Prediction/blob/master/report.pdf) for detailed explanation of the model
+
 #### Model while training:
 
-![Training Model]()
+![Training Model](https://github.com/sagarjinde/Tweet-Popularity-Prediction/blob/master/figs/train_fig.png)
 
 #### Model while testing:
 
-![Testing Model]()
+![Testing Model](https://github.com/sagarjinde/Tweet-Popularity-Prediction/blob/master/figs/test_fig.png)
 
 ## Running the code
 
